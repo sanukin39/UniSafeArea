@@ -2,15 +2,20 @@
 
 namespace UniSafeArea
 {
-    [ExecuteInEditMode]
+    [ExecuteInEditMode, RequireComponent(typeof(RectTransform))]
     public class UniSafeArea : MonoBehaviour
     {
-        [SerializeField] private RectTransform _safeAreaTransform = null;
+        private RectTransform _rectTransform;
         private Resolution _resolutionCache;
+
+        void OnEnable()
+        {
+            _rectTransform = GetComponent<RectTransform>();
+        }
 
         private void Update()
         {
-            if (_safeAreaTransform == null || _resolutionCache.Equals(Screen.resolutions))
+            if (_resolutionCache.Equals(Screen.resolutions))
             {
                 return;
             }
@@ -22,7 +27,7 @@ namespace UniSafeArea
         {
             var area = SafeAreaProvider.GetSafeArea();
             var resolution = Screen.currentResolution;
-            var rect = _safeAreaTransform;
+            var rect = _rectTransform;
             rect.anchorMax = new Vector2(area.xMax / Screen.width, area.yMax / Screen.height);
             rect.anchorMin = new Vector2(area.xMin / Screen.width, area.yMin / Screen.height);
             _resolutionCache = resolution;
