@@ -14,15 +14,49 @@ namespace UniSafeArea
             var height = Screen.height;
             var isPortrait = height > width;
 
-            // iPhone X/XS
-            var device = new DeviceSafeAreaMargin(1125, 2436, new ScreenMargin(132, 102, 0, 0), new ScreenMargin(0, 63, 132, 132));
+            // iPhone X/XS/11Pro
+            var device = new DeviceSafeAreaMargin(1125, 2436, new ScreenMargin(132, 102, 0, 0),
+                new ScreenMargin(0, 63, 132, 132));
+            if (HasSaveResolution(device, width, height))
+            {
+                return CalcSafeArea(device, isPortrait);
+            }
+
+            // iPhone XR/11
+            device = new DeviceSafeAreaMargin(828, 1792, new ScreenMargin(88, 68, 0, 0),
+                new ScreenMargin(0, 42, 88, 88));
+            if (HasSaveResolution(device, width, height))
+            {
+                return CalcSafeArea(device, isPortrait);
+            }
+
+            // iPhone XSMax/11ProMax
+            device = new DeviceSafeAreaMargin(1242, 2688, new ScreenMargin(132, 102, 0, 0),
+                new ScreenMargin(0, 63, 132, 132));
+            if (HasSaveResolution(device, width, height))
+            {
+                return CalcSafeArea(device, isPortrait);
+            }
+
+            // iPhone 12mini
+            device = new DeviceSafeAreaMargin(1125, 2436, new ScreenMargin(150, 102, 0, 0),
+                new ScreenMargin(0, 63, 150, 150));
+            if (HasSaveResolution(device, width, height))
+            {
+                return CalcSafeArea(device, isPortrait);
+            }
+
+            // iPhone 12/12Pro
+            device = new DeviceSafeAreaMargin(1170, 2532, new ScreenMargin(141, 102, 0, 0),
+                new ScreenMargin(0, 63, 141, 141));
             if (HasSaveResolution(device, width, height))
             {
                 return CalcSafeArea(device, isPortrait);
             }
             
-            // iPhone XR
-            device = new DeviceSafeAreaMargin(828, 1792, new ScreenMargin(88, 68, 0, 0), new ScreenMargin(0, 42, 88, 88));
+            // iPhone 12ProMax
+            device = new DeviceSafeAreaMargin(1284, 2778, new ScreenMargin(141, 102, 0, 0),
+                new ScreenMargin(0, 63, 141, 141));
             if (HasSaveResolution(device, width, height))
             {
                 return CalcSafeArea(device, isPortrait);
