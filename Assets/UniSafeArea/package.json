@@ -1,0 +1,11 @@
+{
+  "name": "net.sanukin.unisafearea",
+  "displayName": "UniSafeArea",
+  "version": "1.0.0",
+  "unity": "2019.4",
+  "description": "Support safe area for uGUI",
+  "author": {
+    "name": "sanukin39",
+    "url": "https://github.com/sanukin39"
+  }
+}
