@@ -36,7 +36,16 @@ namespace UniSafeArea
                     new ScreenMargin(0, 63, 141, 141)),
                 // iPhone 12ProMax
                 new DeviceSafeAreaMargin(1284, 2778, new ScreenMargin(141, 102, 0, 0),
-                    new ScreenMargin(0, 63, 141, 141))
+                    new ScreenMargin(0, 63, 141, 141)),
+                // iPad Air4th
+                new DeviceSafeAreaMargin(1640, 2360, new ScreenMargin(0, 40, 0, 0),
+                    new ScreenMargin(0, 40, 0, 0)),
+                // iPad Pro11inch2nd
+                new DeviceSafeAreaMargin(1668, 2388, new ScreenMargin(0, 40, 0, 0),
+                    new ScreenMargin(0, 40, 0, 0)),
+                // iPad Pro12.9inch4th
+                new DeviceSafeAreaMargin(2048, 2732, new ScreenMargin(0, 40, 0, 0),
+                    new ScreenMargin(0, 40, 0, 0))
             };
 
             foreach (var device in devices)
