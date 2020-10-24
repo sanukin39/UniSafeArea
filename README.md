@@ -44,7 +44,7 @@ When you use particular resolution at Game view, UniSafeArea override screen dat
 | 2048x2732 | iPad Pro12.9-inch 4th |
 
 ### License
-MIT
+[MIT](https://github.com/sanukin39/UniSafeArea/blob/master/LICENSE.md)
 
 ### Author
 [sanukin39](https://github.com/sanukin39)
