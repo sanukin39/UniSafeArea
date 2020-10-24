@@ -18,9 +18,11 @@ Get unitypackage from [relase](https://github.com/sanukin39/UniSafeArea/releases
 
 ## Usage
 1. Create empty gameobject under canvas
+
 ![usage1](https://github.com/sanukin39/UniSafeArea/blob/master/images/usage01.png)
 
 2. Add UniSafeArea component to the object
+
 ![usage2](https://github.com/sanukin39/UniSafeArea/blob/master/images/usage02.png)
 
 Done!!
