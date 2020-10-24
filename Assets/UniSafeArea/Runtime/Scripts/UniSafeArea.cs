@@ -11,6 +11,7 @@ namespace UniSafeArea
         void OnEnable()
         {
             _rectTransform = GetComponent<RectTransform>();
+            _rectTransform.sizeDelta = Vector2.zero;
         }
 
         private void Update()
