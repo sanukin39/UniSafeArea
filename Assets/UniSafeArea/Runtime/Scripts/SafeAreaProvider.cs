@@ -22,15 +22,13 @@ namespace UniSafeArea
                 // iPhone XR/11
                 new DeviceSafeAreaMargin(828, 1792, new ScreenMargin(88, 68, 0, 0),
                     new ScreenMargin(0, 42, 88, 88)),
-                // iPhone XR/11
-                new DeviceSafeAreaMargin(828, 1792, new ScreenMargin(88, 68, 0, 0),
-                    new ScreenMargin(0, 42, 88, 88)),
                 // iPhone XSMax/11ProMax
                 new DeviceSafeAreaMargin(1242, 2688, new ScreenMargin(132, 102, 0, 0),
                     new ScreenMargin(0, 63, 132, 132)),
-                // iPhone 12mini
+                /* iPhone 12mini has same resolution at iPhone X but has not same safe area
                 new DeviceSafeAreaMargin(1125, 2436, new ScreenMargin(150, 102, 0, 0),
                     new ScreenMargin(0, 63, 150, 150)),
+                */
                 // iPhone 12/12Pro
                 new DeviceSafeAreaMargin(1170, 2532, new ScreenMargin(141, 102, 0, 0),
                     new ScreenMargin(0, 63, 141, 141)),
