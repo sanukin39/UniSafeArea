@@ -11,7 +11,7 @@ Simple safe area support tool for Unity
 ### Package Manager
 Add following url at package manager
 
-`git@github.com:sanukin39/UniSafeArea.git?path=/Assets/UniSafeArea#1.0.0`
+`git@github.com:sanukin39/UniSafeArea.git?path=/Assets/UniSafeArea#1.0.1`
 
 ### Unity Package
 Get unitypackage from [relase](https://github.com/sanukin39/UniSafeArea/releases/new) page
