@@ -27,10 +27,9 @@ namespace UniSafeArea
         {
             var area = SafeAreaProvider.GetSafeArea();
             var resolution = Screen.currentResolution;
-            var rect = _rectTransform;
-            rect.anchorMax = new Vector2(area.xMax / Screen.width, area.yMax / Screen.height);
-            rect.anchorMin = new Vector2(area.xMin / Screen.width, area.yMin / Screen.height);
+            _rectTransform.anchorMax = new Vector2(area.xMax / Screen.width, area.yMax / Screen.height);
+            _rectTransform.anchorMin = new Vector2(area.xMin / Screen.width, area.yMin / Screen.height);
             _resolutionCache = resolution;
-        } 
+        }
     }
 }
