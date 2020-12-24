@@ -16,7 +16,7 @@ namespace UniSafeArea
 
         private void Update()
         {
-            if (_resolutionCache.Equals(Screen.resolutions))
+            if (_resolutionCache.Equals(Screen.currentResolution))
             {
                 return;
             }
