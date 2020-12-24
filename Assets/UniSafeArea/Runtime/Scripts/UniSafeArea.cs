@@ -6,7 +6,7 @@ namespace UniSafeArea
     public class UniSafeArea : MonoBehaviour
     {
         private RectTransform _rectTransform;
-        private Resolution _resolutionCache;
+        private Vector2 _resolutionCache;
 
         void OnEnable()
         {
@@ -16,20 +16,20 @@ namespace UniSafeArea
 
         private void Update()
         {
-            if (_resolutionCache.Equals(Screen.currentResolution))
+            var resolution = new Vector2(Screen.width, Screen.height);
+            if (_resolutionCache.Equals(resolution))
             {
                 return;
             }
 
-            UpdateSafeArea();
+            UpdateSafeArea(resolution);
         }
 
-        void UpdateSafeArea()
+        void UpdateSafeArea(Vector2 resolution)
         {
             var area = SafeAreaProvider.GetSafeArea();
-            var resolution = Screen.currentResolution;
-            _rectTransform.anchorMax = new Vector2(area.xMax / Screen.width, area.yMax / Screen.height);
-            _rectTransform.anchorMin = new Vector2(area.xMin / Screen.width, area.yMin / Screen.height);
+            _rectTransform.anchorMax = new Vector2(area.xMax / resolution.x, area.yMax / resolution.y);
+            _rectTransform.anchorMin = new Vector2(area.xMin / resolution.x, area.yMin / resolution.y);
             _resolutionCache = resolution;
         }
     }
